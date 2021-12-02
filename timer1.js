@@ -1,6 +1,6 @@
 
 var args = process.argv.slice(2);
-const result = args.filter(args => args > 0);
+const result = args.filter(args => args >= 0 && !isNaN(args));
 for (let timer of result) {
   setTimeout(() => {
     process.stdout.write(`it peep at ${timer} seconds`);
